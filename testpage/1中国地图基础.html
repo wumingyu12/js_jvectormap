@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>基础中国地图</title>
+	<script type="text/javascript" src="../lib/jquery-1.8.2.js"></script>
+	<script type="text/javascript" src="../lib/jquery-mousewheel.js"></script>
+	<link rel="stylesheet" type="text/css" href="../lib/jvectormap/jquery-jvectormap-2.0.3.css">
+	<script type="text/javascript" src="../lib/jvectormap/jquery-jvectormap-2.0.3.min.js"></script>
+	<script type="text/javascript" src="../lib/jvectormap/jquery-jvectormap-cn-mill.js"></script>
+	<script>
+	    $(function(){
+	      $('#china-map').vectorMap({
+	        map:'cn_mill'//这个可以在jquery-jvectormap-cn-mill.js里面找到
+	      });
+	    })
+	</script>
+</head>
+<body>
+	<div id="china-map" style="width: 600px;height: 400px"></div>
+</body>
+</html>
