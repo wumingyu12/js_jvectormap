@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>增强功能</title>
+	<script type="text/javascript" src="../lib/jquery-1.8.2.js"></script>
+	<script type="text/javascript" src="../lib/jquery-mousewheel.js"></script>
+	<link rel="stylesheet" type="text/css" href="../lib/jvectormap/jquery-jvectormap-2.0.3.css">
+	<script type="text/javascript" src="../lib/jvectormap/jquery-jvectormap-2.0.3.min.js"></script>
+	<script type="text/javascript" src="../lib/jvectormap/jquery-jvectormap-cn-mill.js"></script>
+	<script>
+	    $(function(){
+	      	$('#china-map').vectorMap({
+		        map:'cn_mill',//这个可以在jquery-jvectormap-cn-mill.js里面找到
+		        backgroundColor: "#74c9d9",//背景颜色
+		        color: "#13FF60",
+		        hoverColor: false,
+		        markersSelectable:true,//market可以选择
+		        markersSelectableOne:true,//只能选择一个
+			    markerStyle: {
+			      initial: {
+			        fill: '#F8E23B',
+			        stroke: '#383f47',
+			        r:5
+			      }
+			    },
+			    markers: [
+			     //latlng 经纬度，可以通过
+			      {latLng: [22.7186680000,112.2062470000], name: '南牧公司'},
+			      {latLng: [22.6136170000,112.4843890000], name: '高村猪场'},
+			    ],
+			    onMarkerClick:function(e,code){
+			    	alert(code)
+			    },
+	      	});
+	    })
+	</script>
+</head>
+<body>
+	<div id="china-map" style="width: 800px;height: 600px"></div>
+</body>
+</html>
